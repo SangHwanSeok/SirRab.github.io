@@ -1,8 +1,8 @@
 document.write("<h1>Hello World</h1>");
 
 function add_column(){
-  let coldiv = document.getElementById("coldiv"+ColumnNumber);
   let ColumnNumber = 1;
+  let coldiv = document.getElementById("coldiv"+ColumnNumber);
   ++ColumnNumber;
   let newdiv = document.createElement('div');
   newdiv.setAttribute("id", "div" + String(ColumnNumber));
