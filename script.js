@@ -1,4 +1,4 @@
-document.write("<h1>Hello World</h1>");
+console.log("js file load");
 
 function add_column(){
   let ColumnNumber = 1;
