@@ -5,10 +5,10 @@ function add_column(){
   const coldiv = document.getElementById("coldiv"+ColumnNumber);
   ++ColumnNumber;
   const newdiv = document.createElement('div');
-  newdiv.setAttribute("id", "div" + String(ColumnNumber));
+  newdiv.setAttribute("class", "coldiv" + String(ColumnNumber));
   const newinput = document.createElement('input');
   newinput.setAttribute("type","text");
-  newinput.setAttribute("name", "input" + String(ColumnNumber));
+  newinput.setAttribute("id", "col" + String(ColumnNumber));
   newdiv.appendChild(newinput);
   coldiv.appendChild(newdiv);
 }
