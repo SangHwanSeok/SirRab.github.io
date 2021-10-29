@@ -5,7 +5,7 @@ function add_column(){
   const coldiv = document.getElementById("coldiv"+ColumnNumber);
   ++ColumnNumber;
   const newdiv = document.createElement('div');
-  newdiv.setAttribute("class", "coldiv" + String(ColumnNumber));
+  newdiv.setAttribute("class", "coldiv");
   const newinput = document.createElement('input');
   newinput.setAttribute("type","text");
   newinput.setAttribute("id", "col" + String(ColumnNumber));
