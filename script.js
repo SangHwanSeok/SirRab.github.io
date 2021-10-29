@@ -15,11 +15,40 @@ function add_column(){
   const newinput = document.createElement('input');
   newinput.setAttribute("type","text");
   newinput.setAttribute("id", "col" + String(ColumnNumber));
-  
+
   //input을 div에 붙임
   newdiv.appendChild(newinput);
   //class="Head_Div"를 가져옴
   const HeadDiv = document.getElementById("Head_Div");
   //div를 Head_Div에 붙임
   HeadDiv.appendChild(newdiv);
+  /*
+      <html>
+    <head>
+      <script src="script.js"></script>
+    </head>
+    <body>
+      <div class="Head_Div" id="Head_Div">
+        <div class="coldiv" id="coldiv">
+          <input type="text" id="col1">
+        </div>
+      </div>
+          <input type="button" value="Add Column" onclick="add_column()"> 
+    </body>
+  </html>
+  */
+
+  //input type="button" id="removebutton" onclick="remove_column()" 생성
+  const removebutton = document.createElement('input');
+  removebutton.setAttribute("type","button");
+  removebutton.setAttribute("id","removebutton");
+  removebutton.setAttribute("value","삭제");
+  removebutton.setAttribute("onclick","remove_column(this.parentNode.id)");
+  
+  //removebutton을 input 부모에 붙임
+  newinput.parentNode.appendChild(removebutton);
+}
+
+function remove_column(remove){
+  document.getElementById(remove).removeChild("div");
 }
