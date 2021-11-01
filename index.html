@@ -2,17 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="script.js"></script>
+  <style type="text/css">
+   h1{
+    text-align: center;
+  }
+  h2{
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    float:left;
+  }
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  li a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  </style>
 </head>
 <body>
-  <div class="Head_Div" id="Head_Div">
-    <div class="coldiv" id="coldiv">
-      <input type="text" id="col1">
-    </div>
-  </div>
-      <input type="button" value="Add Column" onclick="add_column()"> 
+  <header>
+  <h1><a href='https://fusiongate18.netlify.app'>제목</a></h1>
+</header>
+<nav>
+  <ul>
+    <li><a class="active" href='https://fusiongate18.netlify.app'>홈</a></li>
+    <li><a onClick="location.href='pictureUPLD.html'">그림올리기</a></li>
+    <li><a onClick="location.href='donation.html'">후원</a></li>
+    <li><a onclick="location.href='context.html'">정황</a></li>
+  </ul>
+  </nav>
+  <section>
+  <h2>홈은 내 일기장이얌</h2>
+</section>
 </body>
 </html>
