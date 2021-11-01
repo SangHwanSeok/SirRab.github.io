@@ -42,13 +42,15 @@ function add_column(){
   const removebutton = document.createElement('input');
   removebutton.setAttribute("type","button");
   removebutton.setAttribute("id","removebutton");
+  removebutton.setAttribute("onclick","remove_column(this.id)");
   removebutton.setAttribute("value","삭제");
-  removebutton.setAttribute("onclick","remove_column(this.parentNode.id)");
   
   //removebutton을 input 부모에 붙임
   newinput.parentNode.appendChild(removebutton);
 }
 
 function remove_column(remove){
-  document.getElementById(remove).removeChild("div");
+  const child = document.getElementById(remove);
+  child.parentNode.parentNode.removeChild(child.parentNode);
+  child.parentNode.removeChild(child);
 }
